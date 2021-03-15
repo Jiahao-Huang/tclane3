@@ -1,6 +1,7 @@
 import hydra
 import torch
 import torch.nn as nn
+import models
 
 from torch.utils.data import Dataset, DataLoader
 from torch import optim
@@ -9,14 +10,14 @@ from preprocess import preprocess
 from dataset import *
 from trainer import KFoldTrainer
 
-@hydra.main(config_path='./config.yaml')
+@hydra.main(config_path='config/config.yaml')
 def main(cfg):
     # Current Working Directory
     cwd = utils.get_original_cwd()
     cfg.cwd = cwd
     # Model dictionary
     __MODEL__ = {
-        'rnn': 0
+        'cnn': models.CNN
     }
     
     # Device
@@ -28,16 +29,17 @@ def main(cfg):
     # Preprocess raw data
     if cfg.preprocess:
         preprocess(cfg)    # Once is quite enough
-
+    
     # Make dataset
     train_dataset = makeDataset(cfg, train_flag=True)    # len: 100000
     test_dataset = makeDataset(cfg, train_flag=False)    # len: 25000
     
     # Model
-    #model = __MODEL__[cfg.model_name].to(device)
-    #optimizer = optim.Adam(model.parameters(), lr=cfg.lr, weight_decay=cfg.weight_decay)
-    #criterion = nn.CrossEntropyLoss()
-    model, optimizer, criterion = 0, 0, 0
+    model = __MODEL__[cfg.model_name](cfg)
+    model.to(device)
+
+    optimizer = optim.Adam(model.parameters(), lr=cfg.lr, weight_decay=cfg.weight_decay)
+    criterion = nn.CrossEntropyLoss()
     
     # Train
     k_fold_trainer = KFoldTrainer(cfg, train_dataset, model, device, optimizer, criterion)

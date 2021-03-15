@@ -1,0 +1,4 @@
+model_name: "cnn"
+
+# Embedding Cfg
+embedding_dim: 80

@@ -39,8 +39,9 @@ class KFoldTrainer:
                 X[key] = value.to(self.device)
             y = y.to(self.device)
             
-            optimizer.zero_grad()
+            self.optimizer.zero_grad()
             y_pred = self.model(X)
+            assert 0
             loss = self.criterion(y_pred, y)
             loss.backward()
             optimizer.step()

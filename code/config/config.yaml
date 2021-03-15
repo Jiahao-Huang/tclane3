@@ -1,0 +1,9 @@
+# current working directory
+cwd: "."
+
+defaults:
+  - preprocess
+  - train
+  - model: cnn
+
+

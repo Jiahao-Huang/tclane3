@@ -1,27 +1,12 @@
-# current working directory
-cwd: "."
 
 # data
 train_tsv: "../tcdata/oppo_breeno_round1_data/train.tsv"
 test_tsv: "../tcdata/oppo_breeno_round1_data/testB.tsv"
 
-# model
-model_name: "rnn"
-
-
 # preprocess config
 preprocess: True
 train_tmp: "../user_data/tmp_data/train.pkl"
 test_tmp: "../user_data/tmp_data/test.pkl"
-
 swap: True    # swap two sentences
 
-# train config
-use_GPU: True
-gpu_id: 0
-
-EPOCH: 50
-batch_size: 32
-k_fold: 5
-lr: 3e-4
-weight_decay: 1e-3
+vocab_size: 21962

@@ -9,7 +9,7 @@ class Embedding(nn.Module):
         self.embedding_dim = cfg.embedding_dim
 
         self.embedding = nn.Embedding(self.vocab_size, self.embedding_dim, padding_idx=0)
-        self.layernorm = nn.LayerNorm(self.embedding_dim)
+        self.layernorm = nn.LayerNorm(self.embedding_dim * 2)
 
 
     def forward(self, x):    # batch_size * xlen
@@ -22,15 +22,7 @@ class Embedding(nn.Module):
         word_embedding1 = self.embedding(x1)
         word_embedding2 = self.embedding(x2)
 
-        word_embedding = torch.cat((word_embedding1, word_embedding2), 1)
-
-        print(x.shape)
-        print(x1.shape)
-        print(x2.shape)
-        print(word_embedding1.shape)
-        print(word_embedding2.shape)
-        print(word_embedding.shape)
-
+        word_embedding = torch.cat((word_embedding1, word_embedding2), 2)
 
         return self.layernorm(word_embedding)
 

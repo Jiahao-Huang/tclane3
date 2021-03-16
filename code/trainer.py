@@ -35,18 +35,15 @@ class KFoldTrainer:
 
     def train(self, train_dataloader):
         for (X, y) in train_dataloader:
-            for key, value in X.items():
-                X[key] = value.to(self.device)
+            for (key, val) in X.items():
+                X[key] = val.to(self.device)
             y = y.to(self.device)
-            
             self.optimizer.zero_grad()
             y_pred = self.model(X)
-            assert 0
             loss = self.criterion(y_pred, y)
+            print(loss)
             loss.backward()
-            optimizer.step()
-
-        return 0
+            self.optimizer.step()
 
     def validate(self, valid_dataloader):
         for (X, y) in valid_dataloader:
@@ -72,7 +69,7 @@ class KFoldTrainer:
             valid_dataloader = DataLoader(valid, batch_size=cfg.batch_size, shuffle=True, collate_fn=collate_fn(cfg))
 
             self.train(train_dataloader)
-            self.validate(valid_dataloader)
+            #self.validate(valid_dataloader)
 
 
 

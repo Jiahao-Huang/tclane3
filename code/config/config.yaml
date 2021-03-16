@@ -3,7 +3,6 @@ cwd: "."
 
 defaults:
   - preprocess
-  - train
   - model: cnn
 
 

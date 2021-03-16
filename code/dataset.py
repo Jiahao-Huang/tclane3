@@ -49,13 +49,13 @@ def collate_fn(cfg):
             if cfg.swap and randint(0,1):    # randomly swap
                 x1, x2 = x2, x1
                 b['len1'], b['len2']  = b['len2'], b['len1']
-            x.append(x1 + [-1] + x2)
+            x.append(x1 + x2)
             len1.append(b['len1'])
             len2.append(b['len2'])
             if 'y' in b:
                 y.append(b['y'])
         
-        # X['x'].shape = [batch_size, 2*max_len+1]
+        # X['x'].shape = [batch_size, 2*max_len]
         X['x'] = torch.tensor(x)
         X['len1'] = torch.tensor(len1)
         X['len2'] = torch.tensor(len2)

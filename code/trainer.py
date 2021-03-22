@@ -39,6 +39,9 @@ class KFoldTrainer:
         return res.view(-1, 1)
             
     def train(self, train_dataloader):
+        tot_loss = 0
+        len_data = 0
+
         for (X1, X2, y) in train_dataloader:
             X1 = X1.to(self.device)
             X2 = X2.to(self.device)
@@ -49,9 +52,16 @@ class KFoldTrainer:
             similarity = self.inner_product(y1_pred, y2_pred) / self.inner_product(y1_pred, y1_pred) / self.inner_product(y2_pred, y2_pred)
 
             loss = self.criterion(torch.cat((-similarity, similarity), dim=1), y)
-            print(loss)
             loss.backward()
             self.optimizer.step()
+
+            with torch.no_grad():
+                l = X1.shape[0]
+                len_data = len_data + l
+                tot_loss = tot_loss + l * loss
+        
+        avg_loss = tot_loss / len_data
+        return avg_loss
 
     def validate(self, valid_dataloader):
         for (X1, X2, y) in valid_dataloader:
@@ -76,7 +86,8 @@ class KFoldTrainer:
             train_dataloader = DataLoader(train, batch_size=cfg.batch_size, shuffle=True, collate_fn=collate_fn(cfg))
             valid_dataloader = DataLoader(valid, batch_size=cfg.batch_size, shuffle=True, collate_fn=collate_fn(cfg))
 
-            self.train(train_dataloader)
+            avg_loss = self.train(train_dataloader)
+            print("TRAINING: Epoch%d.Fold%d. Average Loss:%f " %(self.epoch, k, avg_loss))
             #self.validate(valid_dataloader)
 
 

@@ -1,1 +1,1 @@
-from .CNN import CNN
+from .Transformer import Transformer

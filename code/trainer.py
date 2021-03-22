@@ -32,21 +32,29 @@ class KFoldTrainer:
             folds[fold_id].append(self.train_dataset[data_id])
         return folds
 
-
+    def inner_product(self, y1, y2):
+        y1 = y1.unsqueeze(-1)
+        y2 = y2.unsqueeze(-1)
+        res = torch.matmul(y1.transpose(1, 2), y2)
+        return res.view(-1, 1)
+            
     def train(self, train_dataloader):
-        for (X, y) in train_dataloader:
-            for (key, val) in X.items():
-                X[key] = val.to(self.device)
+        for (X1, X2, y) in train_dataloader:
+            X1 = X1.to(self.device)
+            X2 = X2.to(self.device)
             y = y.to(self.device)
             self.optimizer.zero_grad()
-            y_pred = self.model(X)
-            loss = self.criterion(y_pred, y)
+            y1_pred = self.model(X1)
+            y2_pred = self.model(X2)
+            similarity = self.inner_product(y1_pred, y2_pred) / self.inner_product(y1_pred, y1_pred) / self.inner_product(y2_pred, y2_pred)
+
+            loss = self.criterion(torch.cat((-similarity, similarity), dim=1), y)
             print(loss)
             loss.backward()
             self.optimizer.step()
 
     def validate(self, valid_dataloader):
-        for (X, y) in valid_dataloader:
+        for (X1, X2, y) in valid_dataloader:
             with torch.no_grad():
                 y_pred = self.model(X)
                 loss = self.criterion(y_pred, y)

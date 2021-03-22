@@ -17,7 +17,7 @@ def main(cfg):
     cfg.cwd = cwd
     # Model dictionary
     __MODEL__ = {
-        'cnn': models.CNN
+        'transformer': models.Transformer
     }
     
     # Device
@@ -43,7 +43,7 @@ def main(cfg):
     
     # Train
     k_fold_trainer = KFoldTrainer(cfg, train_dataset, model, device, optimizer, criterion)
-
+ 
     for epoch in range(cfg.EPOCH):
         k_fold_trainer.set_epoch(epoch)
         k_fold_trainer.kFoldTrain()

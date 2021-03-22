@@ -41,7 +41,7 @@ def collate_fn(cfg):
     # collate function
     def collate_fn_b(batch):
         max_len = get_max_len(batch)
-        X, x, y = {}, [], []
+        X1, X2, y = [], [], []
         len1, len2 = [], []
         for b in batch:
             x1 = padding(b['x1'], max_len)
@@ -49,18 +49,20 @@ def collate_fn(cfg):
             if cfg.swap and randint(0,1):    # randomly swap
                 x1, x2 = x2, x1
                 b['len1'], b['len2']  = b['len2'], b['len1']
-            x.append(x1 + x2)
+            X1.append(x1)
+            X2.append(x2)
             len1.append(b['len1'])
             len2.append(b['len2'])
             if 'y' in b:
                 y.append(b['y'])
         
-        # X['x'].shape = [batch_size, 2*max_len]
-        X['x'] = torch.tensor(x)
-        X['len1'] = torch.tensor(len1)
-        X['len2'] = torch.tensor(len2)
+        # X['x'] = torch.tensor(x)
+        # X['len1'] = torch.tensor(len1)
+        # X['len2'] = torch.tensor(len2)
+        X1 = torch.tensor(X1)
+        X2 = torch.tensor(X2)
         y = torch.tensor(y)
-        return X, y
+        return X1, X2, y
     
     return collate_fn_b
             

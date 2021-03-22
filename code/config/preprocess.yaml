@@ -1,12 +1,12 @@
 
 # data
-train_tsv: "../tcdata/oppo_breeno_round1_data/train.tsv"
-test_tsv: "../tcdata/oppo_breeno_round1_data/testB.tsv"
+train_tsv: "./tcdata/oppo_breeno_round1_data/train.tsv"
+test_tsv: "./tcdata/oppo_breeno_round1_data/testB.tsv"
 
 # preprocess config
 preprocess: True
-train_tmp: "../user_data/tmp_data/train.pkl"
-test_tmp: "../user_data/tmp_data/test.pkl"
+train_tmp: "./user_data/tmp_data/train.pkl"
+test_tmp: "./user_data/tmp_data/test.pkl"
 swap: True    # swap two sentences
 
 vocab_size: 21962

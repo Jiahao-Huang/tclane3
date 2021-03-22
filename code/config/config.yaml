@@ -3,6 +3,6 @@ cwd: "."
 
 defaults:
   - preprocess
-  - model: cnn
+  - model: transformer
 
 

@@ -1,0 +1,69 @@
+[2021-03-23 14:00:27,836][__main__][INFO] - ====================
+[2021-03-23 14:00:27,843][__main__][INFO] - Device: cuda:1
+[2021-03-23 14:00:27,843][__main__][INFO] - Preprocessing...
+[2021-03-23 14:00:28,700][__main__][INFO] - Making Dataset...
+[2021-03-23 14:00:32,373][__main__][INFO] - Model:rnn
+[2021-03-23 14:00:32,373][__main__][INFO] - =====Start 5-fold training!=====
+[2021-03-23 14:00:32,454][trainer][INFO] - Epoch: 0 Fold: 5
+[2021-03-23 14:00:32,496][trainer][INFO] - [0% data] Average Loss: 1.48 
+[2021-03-23 14:00:36,337][trainer][INFO] - [10% data] Average Loss: -1554.95 
+[2021-03-23 14:00:40,160][trainer][INFO] - [20% data] Average Loss: -1566.17 
+[2021-03-23 14:00:44,036][trainer][INFO] - [30% data] Average Loss: -1577.44 
+[2021-03-23 14:00:47,906][trainer][INFO] - [40% data] Average Loss: -1578.11 
+[2021-03-23 14:00:51,735][trainer][INFO] - [50% data] Average Loss: -1582.97 
+[2021-03-23 14:00:55,632][trainer][INFO] - [60% data] Average Loss: -1584.09 
+[2021-03-23 14:00:59,454][trainer][INFO] - [70% data] Average Loss: -1583.40 
+[2021-03-23 14:01:03,268][trainer][INFO] - [80% data] Average Loss: -1584.18 
+[2021-03-23 14:01:07,146][trainer][INFO] - [90% data] Average Loss: -1585.52 
+[2021-03-23 14:01:11,005][trainer][INFO] - [100% data] Average Loss: -1586.03 
+[2021-03-23 14:01:11,006][trainer][INFO] - Epoch: 0 Fold: 5
+[2021-03-23 14:01:11,030][trainer][INFO] - [0% data] Average Loss: -1624.31 
+[2021-03-23 14:01:14,837][trainer][INFO] - [10% data] Average Loss: -1569.73 
+[2021-03-23 14:01:18,631][trainer][INFO] - [20% data] Average Loss: -1574.79 
+[2021-03-23 14:01:22,496][trainer][INFO] - [30% data] Average Loss: -1579.64 
+[2021-03-23 14:01:26,346][trainer][INFO] - [40% data] Average Loss: -1582.85 
+[2021-03-23 14:01:30,252][trainer][INFO] - [50% data] Average Loss: -1584.58 
+[2021-03-23 14:01:34,138][trainer][INFO] - [60% data] Average Loss: -1585.40 
+[2021-03-23 14:01:37,978][trainer][INFO] - [70% data] Average Loss: -1586.20 
+[2021-03-23 14:01:41,842][trainer][INFO] - [80% data] Average Loss: -1585.34 
+[2021-03-23 14:01:45,733][trainer][INFO] - [90% data] Average Loss: -1585.55 
+[2021-03-23 14:01:49,628][trainer][INFO] - [100% data] Average Loss: -1585.88 
+[2021-03-23 14:01:49,629][trainer][INFO] - Epoch: 0 Fold: 5
+[2021-03-23 14:01:49,658][trainer][INFO] - [0% data] Average Loss: -1672.30 
+[2021-03-23 14:01:53,424][trainer][INFO] - [10% data] Average Loss: -1577.18 
+[2021-03-23 14:01:57,215][trainer][INFO] - [20% data] Average Loss: -1579.55 
+[2021-03-23 14:02:01,059][trainer][INFO] - [30% data] Average Loss: -1587.89 
+[2021-03-23 14:02:04,839][trainer][INFO] - [40% data] Average Loss: -1587.71 
+[2021-03-23 14:02:08,598][trainer][INFO] - [50% data] Average Loss: -1589.96 
+[2021-03-23 14:02:12,424][trainer][INFO] - [60% data] Average Loss: -1587.71 
+[2021-03-23 14:02:16,178][trainer][INFO] - [70% data] Average Loss: -1585.32 
+[2021-03-23 14:02:20,025][trainer][INFO] - [80% data] Average Loss: -1586.19 
+[2021-03-23 14:02:23,842][trainer][INFO] - [90% data] Average Loss: -1585.60 
+[2021-03-23 14:02:27,675][trainer][INFO] - [100% data] Average Loss: -1585.27 
+[2021-03-23 14:02:27,676][trainer][INFO] - Epoch: 0 Fold: 5
+[2021-03-23 14:02:27,699][trainer][INFO] - [0% data] Average Loss: -1600.95 
+[2021-03-23 14:02:31,538][trainer][INFO] - [10% data] Average Loss: -1604.07 
+[2021-03-23 14:02:35,344][trainer][INFO] - [20% data] Average Loss: -1593.12 
+[2021-03-23 14:02:39,150][trainer][INFO] - [30% data] Average Loss: -1591.23 
+[2021-03-23 14:02:42,950][trainer][INFO] - [40% data] Average Loss: -1588.91 
+[2021-03-23 14:02:46,832][trainer][INFO] - [50% data] Average Loss: -1589.74 
+[2021-03-23 14:02:50,622][trainer][INFO] - [60% data] Average Loss: -1587.94 
+[2021-03-23 14:02:54,460][trainer][INFO] - [70% data] Average Loss: -1585.92 
+[2021-03-23 14:02:58,313][trainer][INFO] - [80% data] Average Loss: -1586.63 
+[2021-03-23 14:03:02,154][trainer][INFO] - [90% data] Average Loss: -1588.15 
+[2021-03-23 14:03:05,962][trainer][INFO] - [100% data] Average Loss: -1587.94 
+[2021-03-23 14:03:05,963][trainer][INFO] - Epoch: 0 Fold: 5
+[2021-03-23 14:03:05,992][trainer][INFO] - [0% data] Average Loss: -1664.30 
+[2021-03-23 14:03:09,833][trainer][INFO] - [10% data] Average Loss: -1587.39 
+[2021-03-23 14:03:13,671][trainer][INFO] - [20% data] Average Loss: -1584.71 
+[2021-03-23 14:03:17,513][trainer][INFO] - [30% data] Average Loss: -1589.71 
+[2021-03-23 14:03:21,375][trainer][INFO] - [40% data] Average Loss: -1586.41 
+[2021-03-23 14:03:25,213][trainer][INFO] - [50% data] Average Loss: -1585.09 
+[2021-03-23 14:03:29,080][trainer][INFO] - [60% data] Average Loss: -1585.96 
+[2021-03-23 14:03:32,965][trainer][INFO] - [70% data] Average Loss: -1586.42 
+[2021-03-23 14:03:36,751][trainer][INFO] - [80% data] Average Loss: -1587.49 
+[2021-03-23 14:03:40,546][trainer][INFO] - [90% data] Average Loss: -1586.16 
+[2021-03-23 14:03:44,349][trainer][INFO] - [100% data] Average Loss: -1585.95 
+[2021-03-23 14:03:44,433][trainer][INFO] - Epoch: 1 Fold: 5
+[2021-03-23 14:03:44,453][trainer][INFO] - [0% data] Average Loss: -1640.32 
+[2021-03-23 14:03:48,222][trainer][INFO] - [10% data] Average Loss: -1583.91 

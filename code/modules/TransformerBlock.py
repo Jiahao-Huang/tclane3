@@ -20,9 +20,9 @@ class MultiHeadAttention(nn.Module):
         batch_size = x.shape[0]
 
         # batch_size * seq_length * (n_heads * attention_hid) -->  batch_size * n_heads * seq_length * attention_hid
-        Q = self.Wq(x).view(batch_size, -1, self.n_heads, self.attention_hid).transpose(1, 2)
-        K = self.Wk(x).view(batch_size, -1, self.n_heads, self.attention_hid).transpose(1, 2)
-        V = self.Wv(x).view(batch_size, -1, self.n_heads, self.attention_hid).transpose(1, 2)
+        Q = self.Wq(x).reshape(batch_size, -1, self.n_heads, self.attention_hid).transpose(1, 2)
+        K = self.Wk(x).reshape(batch_size, -1, self.n_heads, self.attention_hid).transpose(1, 2)
+        V = self.Wv(x).reshape(batch_size, -1, self.n_heads, self.attention_hid).transpose(1, 2)
 
         A = torch.matmul(Q, K.transpose(-1, -2)) / np.sqrt(self.attention_hid)
         A.masked_fill_(attention_mask, -1e9)
@@ -77,10 +77,10 @@ class TransformerBlock(nn.Module):
     
     def forward(self, x):
         attention_mask = self.get_attention_mask(x)
-        embedding_output = self.embedding(x)
+        output = self.embedding(x)
         for transformer_layer in self.transformer_layers:
-            x = transformer_layer(embedding_output, attention_mask)
-        return x
+            output = transformer_layer(output, attention_mask)
+        return output
 
         
 

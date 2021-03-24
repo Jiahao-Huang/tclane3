@@ -1,0 +1,22 @@
+[2021-03-23 14:07:50,846][__main__][INFO] - ====================
+[2021-03-23 14:07:50,854][__main__][INFO] - Device: cuda:1
+[2021-03-23 14:07:50,854][__main__][INFO] - Preprocessing...
+[2021-03-23 14:07:51,707][__main__][INFO] - Making Dataset...
+[2021-03-23 14:07:55,377][__main__][INFO] - Model:rnn
+[2021-03-23 14:07:55,378][__main__][INFO] - =====Start 5-fold training!=====
+[2021-03-23 14:07:55,468][trainer][INFO] - Epoch: 0 Fold: 0
+[2021-03-23 14:07:55,511][trainer][INFO] - [0% data] Train Loss: 0.88 
+[2021-03-23 14:07:59,443][trainer][INFO] - [10% data] Train Loss: -1561.94 
+[2021-03-23 14:08:03,315][trainer][INFO] - [20% data] Train Loss: -1572.04 
+[2021-03-23 14:08:07,215][trainer][INFO] - [30% data] Train Loss: -1577.95 
+[2021-03-23 14:08:11,067][trainer][INFO] - [40% data] Train Loss: -1579.47 
+[2021-03-23 14:08:14,893][trainer][INFO] - [50% data] Train Loss: -1578.63 
+[2021-03-23 14:08:18,730][trainer][INFO] - [60% data] Train Loss: -1579.58 
+[2021-03-23 14:08:22,599][trainer][INFO] - [70% data] Train Loss: -1581.47 
+[2021-03-23 14:08:26,458][trainer][INFO] - [80% data] Train Loss: -1581.50 
+[2021-03-23 14:08:30,296][trainer][INFO] - [90% data] Train Loss: -1581.10 
+[2021-03-23 14:08:34,099][trainer][INFO] - [100% data] Train Loss: -1580.50 
+[2021-03-23 14:08:38,203][trainer][INFO] - Valid Loss: -1596.28 
+[2021-03-23 14:08:38,203][trainer][INFO] - Epoch: 0 Fold: 1
+[2021-03-23 14:08:38,226][trainer][INFO] - [0% data] Train Loss: -1608.31 
+[2021-03-23 14:08:42,094][trainer][INFO] - [10% data] Train Loss: -1580.46 

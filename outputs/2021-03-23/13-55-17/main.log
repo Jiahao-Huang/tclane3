@@ -1,0 +1,7 @@
+[2021-03-23 13:55:17,972][__main__][INFO] - ====================
+[2021-03-23 13:55:17,979][__main__][INFO] - Device: {device}
+[2021-03-23 13:55:17,979][__main__][INFO] - Preprocessing...
+[2021-03-23 13:55:18,824][__main__][INFO] - Making Dataset...
+[2021-03-23 13:55:22,502][__main__][INFO] - Model:{cfg.model_name}
+[2021-03-23 13:55:22,503][__main__][INFO] - =====Start 5-fold training!=====
+[2021-03-23 13:55:22,585][trainer][INFO] - Epoch: 0 Fold: 5

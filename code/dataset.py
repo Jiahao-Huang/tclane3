@@ -41,6 +41,7 @@ def collate_fn(cfg):
     # collate function
     def collate_fn_b(batch):
         max_len = get_max_len(batch)
+        X = {}
         X1, X2, y = [], [], []
         len1, len2 = [], []
         for b in batch:
@@ -55,14 +56,14 @@ def collate_fn(cfg):
             len2.append(b['len2'])
             if 'y' in b:
                 y.append(b['y'])
+
+        X['X1'] = torch.tensor(X1)
+        X['X2'] = torch.tensor(X2)
+        X['len1'] = torch.tensor(len1)
+        X['len2'] = torch.tensor(len2)
         
-        # X['x'] = torch.tensor(x)
-        # X['len1'] = torch.tensor(len1)
-        # X['len2'] = torch.tensor(len2)
-        X1 = torch.tensor(X1)
-        X2 = torch.tensor(X2)
         y = torch.tensor(y)
-        return X1, X2, y
+        return X, y
     
     return collate_fn_b
             

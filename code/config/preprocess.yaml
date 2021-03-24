@@ -9,4 +9,7 @@ train_tmp: "./user_data/tmp_data/train.pkl"
 test_tmp: "./user_data/tmp_data/test.pkl"
 swap: True    # swap two sentences
 
+data_size_train: 100000
+data_size_test: 25000
+
 vocab_size: 21962

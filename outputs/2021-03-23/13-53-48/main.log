@@ -1,0 +1,6 @@
+[2021-03-23 13:53:48,304][__main__][INFO] - ====================
+[2021-03-23 13:53:48,311][__main__][INFO] - Device: {device}
+[2021-03-23 13:53:48,311][__main__][INFO] - Preprocessing...
+[2021-03-23 13:53:49,157][__main__][INFO] - Making Dataset...
+[2021-03-23 13:53:52,837][__main__][INFO] - Model:{cfg.model_name}
+[2021-03-23 13:53:52,837][__main__][INFO] - =====Start 5-fold training!=====

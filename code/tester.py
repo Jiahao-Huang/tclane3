@@ -35,4 +35,4 @@ class Tester:
                 results += result
         
         with open(os.path.join(cfg.cwd, cfg.result_file), 'w') as f:
-            f.write('\n'.join('%s'%r for r in results))
+            f.write('\t'.join('%s'%r for r in results))

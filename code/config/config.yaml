@@ -10,6 +10,6 @@ gpu_id: 1
 
 model_dir: "./code/model_files/"
 test_with_best_model: True
-result_file: "./outputs/result.txt"
+result_file: "./prediction_result/result.tsv"
 
 test_only: False

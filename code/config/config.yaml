@@ -5,4 +5,11 @@ defaults:
   - preprocess
   - model: rnn
 
+use_GPU: True
+gpu_id: 1
 
+model_dir: "./code/model_files/"
+test_with_best_model: True
+result_file: "./outputs/result.txt"
+
+test_only: False

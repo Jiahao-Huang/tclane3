@@ -19,7 +19,7 @@ def tsv2pkl(tsv_f, pkl_f, train_flag):  # .tsv => .pkl
             if train_flag: 
                 pkl_dict['y'] = int(l[2])
             pkl_list.append(pkl_dict)
-            vocab_size = max(vocab_size, max(max(pkl_dict['x1']), max(pkl_dict['x2'])))
+            vocab_size = max(vocab_size, max(max(pkl_dict['x1']), max(pkl_dict['x2']))) + 1
             data_size += 1
         
     with open(pkl_f, 'wb') as f:

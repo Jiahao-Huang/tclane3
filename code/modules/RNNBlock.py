@@ -25,9 +25,9 @@ class RNNBlock(nn.Module):
         )
     
     def forward(self, x, x_len):
-        batch_size, seq_len, _ = x.size()
+        b, seq_len, _ = x.size()
         x = pack_padded_sequence(x, x_len, batch_first=True, enforce_sorted=False)
         rnn_output, (hn, cn) = self.rnn(x)
-        hn = hn.transpose(0, 1).reshape(self.batch_size, -1)
-        cn = cn.transpose(0, 1).reshape(self.batch_size, -1)
+        hn = hn.transpose(0, 1).reshape(b, -1)
+        cn = cn.transpose(0, 1).reshape(b, -1)
         return rnn_output, hn, cn

@@ -62,7 +62,7 @@ class KFoldTrainer:
                     percent = (tot_data * 10) // self.data_size_train
                     logger.info("[%d%%] Train Loss: %.6f Accuracy: %.2f%%"%(tot_data * 100 // self.data_size_train, tot_loss / tot_data, tot_correct / tot_data*100))
 
-        return tot_data, tot_loss, tot_correct
+        return tot_loss / tot_data, tot_correct / tot_data
 
     def validate(self, valid_dataloader):
         tot_data = 0
@@ -74,7 +74,6 @@ class KFoldTrainer:
                 for (k, v) in X.items():
                     X[k] = v.to(self.device)
                 y = y.to(self.device)
-
                 y_pred = self.model(X)
 
                 loss = self.criterion(y_pred, y)
@@ -84,7 +83,7 @@ class KFoldTrainer:
                 tot_correct += torch.eq(torch.argmax(y_pred, dim=1), y).sum().item()
         
         logger.info("Valid Loss: %.6f Accuracy: %.2f%%"%(tot_loss / tot_data, tot_correct / tot_data*100))
-        return tot_data, tot_loss, tot_correct
+        return tot_loss / tot_data, tot_correct / tot_data
     
     def kFoldTrain(self):
         cfg = self.cfg
@@ -92,6 +91,8 @@ class KFoldTrainer:
         # make folds
         self.train_dataset.shuffle()
         folds = self.make_folds()
+        loss_t_mean, acc_t_mean, loss_v_mean, acc_v_mean = 0, 0, 0, 0
+
         for k in range(self.k_fold):   # fold-k will be valid set
             logger.info("="*5 + " Epoch %d - Fold %d " % (self.epoch, k) + "="*5)
             train = []
@@ -103,10 +104,12 @@ class KFoldTrainer:
             train_dataloader = DataLoader(train, batch_size=cfg.batch_size, shuffle=True, collate_fn=collate_fn(cfg))
             valid_dataloader = DataLoader(valid, batch_size=cfg.batch_size, shuffle=True, collate_fn=collate_fn(cfg))
 
-            self.train(train_dataloader)
-            self.validate(valid_dataloader)
+            loss_t, acc_t = self.train(train_dataloader)
+            loss_v, acc_v = self.validate(valid_dataloader)
 
-
-
-            
-
+            loss_t_mean += loss_t / self.k_fold
+            acc_t_mean += acc_t / self.k_fold
+            loss_v_mean += loss_v / self.k_fold
+            acc_v_mean += acc_v / self.k_fold
+        
+        return loss_t_mean, acc_t_mean, loss_v_mean, acc_v_mean

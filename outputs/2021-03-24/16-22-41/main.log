@@ -1,0 +1,8 @@
+[2021-03-24 16:22:41,925][__main__][INFO] - ====================
+[2021-03-24 16:22:41,933][__main__][INFO] - Device: cuda:1
+[2021-03-24 16:22:41,933][__main__][INFO] - Preprocessing...
+[2021-03-24 16:22:42,788][__main__][INFO] - Making Dataset...
+[2021-03-24 16:22:43,062][__main__][INFO] - Model:rnn
+[2021-03-24 16:22:47,102][__main__][INFO] - ===== Start testing! =====
+[2021-03-24 16:23:08,404][__main__][INFO] - Results saved in /home/deployer/hjh/tclane3/./outputs/result.txt. 
+[2021-03-24 16:23:08,404][__main__][INFO] - ===== Test finished. =====

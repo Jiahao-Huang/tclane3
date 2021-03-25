@@ -1,0 +1,9 @@
+[2021-03-24 15:34:42,922][__main__][INFO] - ====================
+[2021-03-24 15:34:42,929][__main__][INFO] - Device: cuda:1
+[2021-03-24 15:34:42,929][__main__][INFO] - Preprocessing...
+[2021-03-24 15:34:43,798][__main__][INFO] - Making Dataset...
+[2021-03-24 15:34:44,075][__main__][INFO] - Model:rnn
+[2021-03-24 15:34:48,149][__main__][INFO] - ===== Start 5-fold training! =====
+[2021-03-24 15:34:48,239][trainer][INFO] - ===== Epoch 0 - Fold 0 =====
+[2021-03-24 15:34:48,342][trainer][INFO] - [0%] Train Loss: 0.022603 Accuracy: 28.12%
+[2021-03-24 15:35:10,498][trainer][INFO] - [10%] Train Loss: 0.017972 Accuracy: 68.60%

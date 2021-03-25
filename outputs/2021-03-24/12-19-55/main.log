@@ -1,0 +1,21 @@
+[2021-03-24 12:19:55,487][__main__][INFO] - ====================
+[2021-03-24 12:19:55,495][__main__][INFO] - Device: cuda:1
+[2021-03-24 12:19:55,495][__main__][INFO] - Preprocessing...
+[2021-03-24 12:19:56,346][__main__][INFO] - Making Dataset...
+[2021-03-24 12:19:56,619][__main__][INFO] - Model:rnn
+[2021-03-24 12:20:00,186][__main__][INFO] - ===== Start 5-fold training! =====
+[2021-03-24 12:20:00,268][trainer][INFO] - ===== Epoch 0 - Fold 0 =====
+[2021-03-24 12:20:00,356][trainer][INFO] - [0%] Train Loss: 0.021746 Accuracy: 43.75%
+[2021-03-24 12:20:20,486][trainer][INFO] - [10%] Train Loss: 0.017858 Accuracy: 69.74%
+[2021-03-24 12:20:40,901][trainer][INFO] - [20%] Train Loss: 0.017255 Accuracy: 71.32%
+[2021-03-24 12:21:01,384][trainer][INFO] - [30%] Train Loss: 0.016795 Accuracy: 72.53%
+[2021-03-24 12:21:21,695][trainer][INFO] - [40%] Train Loss: 0.016371 Accuracy: 73.32%
+[2021-03-24 12:21:42,468][trainer][INFO] - [50%] Train Loss: 0.016095 Accuracy: 73.91%
+[2021-03-24 12:22:02,713][trainer][INFO] - [60%] Train Loss: 0.015880 Accuracy: 74.47%
+[2021-03-24 12:22:23,154][trainer][INFO] - [70%] Train Loss: 0.015753 Accuracy: 74.85%
+[2021-03-24 12:22:43,518][trainer][INFO] - [80%] Train Loss: 0.015632 Accuracy: 75.09%
+[2021-03-24 12:23:03,453][trainer][INFO] - [90%] Train Loss: 0.015501 Accuracy: 75.40%
+[2021-03-24 12:23:23,904][trainer][INFO] - [100%] Train Loss: 0.015356 Accuracy: 75.72%
+[2021-03-24 12:23:42,180][trainer][INFO] - Valid Loss: 0.014114 Accuracy: 78.41%
+[2021-03-24 12:23:42,181][trainer][INFO] - ===== Epoch 0 - Fold 1 =====
+[2021-03-24 12:23:42,264][trainer][INFO] - [0%] Train Loss: 0.018668 Accuracy: 65.62%

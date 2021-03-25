@@ -17,10 +17,7 @@ use_cos: True
 cls_hid: 256
 
 # train config
-use_GPU: True
-gpu_id: 1
-
-EPOCH: 10
+EPOCH: 20
 batch_size: 32
 k_fold: 5
 lr: 8e-5

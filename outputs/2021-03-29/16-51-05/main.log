@@ -1,0 +1,36 @@
+[2021-03-29 16:51:05,115][__main__][INFO] - ====================
+[2021-03-29 16:51:05,123][__main__][INFO] - Device: cuda:1
+[2021-03-29 16:51:05,123][__main__][INFO] - Preprocessing...
+[2021-03-29 16:51:05,977][__main__][INFO] - Making Dataset...
+[2021-03-29 16:51:06,247][__main__][INFO] - Model:cnn
+[2021-03-29 16:51:10,276][__main__][INFO] - ===== Start 5-fold training! =====
+[2021-03-29 16:51:10,357][trainer][INFO] - ===== Epoch 0 - Fold 0 =====
+[2021-03-29 16:51:10,392][trainer][INFO] - [0%] Train Loss: 0.213000 Accuracy: 46.88%
+[2021-03-29 16:51:15,676][trainer][INFO] - [10%] Train Loss: 0.143005 Accuracy: 56.80%
+[2021-03-29 16:51:21,002][trainer][INFO] - [20%] Train Loss: nan Accuracy: 60.36%
+[2021-03-29 16:51:26,360][trainer][INFO] - [30%] Train Loss: nan Accuracy: 61.23%
+[2021-03-29 16:51:31,707][trainer][INFO] - [40%] Train Loss: nan Accuracy: 61.60%
+[2021-03-29 16:51:37,028][trainer][INFO] - [50%] Train Loss: nan Accuracy: 61.82%
+[2021-03-29 16:51:42,354][trainer][INFO] - [60%] Train Loss: nan Accuracy: 62.10%
+[2021-03-29 16:51:47,677][trainer][INFO] - [70%] Train Loss: nan Accuracy: 62.33%
+[2021-03-29 16:51:53,029][trainer][INFO] - [80%] Train Loss: nan Accuracy: 62.55%
+[2021-03-29 16:51:58,357][trainer][INFO] - [90%] Train Loss: nan Accuracy: 62.70%
+[2021-03-29 16:52:03,680][trainer][INFO] - [100%] Train Loss: nan Accuracy: 62.86%
+[2021-03-29 16:52:06,221][trainer][INFO] - Valid Loss: nan Accuracy: 63.38%
+[2021-03-29 16:52:06,221][trainer][INFO] - ===== Epoch 0 - Fold 1 =====
+[2021-03-29 16:52:06,250][trainer][INFO] - [0%] Train Loss: nan Accuracy: 75.00%
+[2021-03-29 16:52:11,531][trainer][INFO] - [10%] Train Loss: nan Accuracy: 62.74%
+[2021-03-29 16:52:16,850][trainer][INFO] - [20%] Train Loss: nan Accuracy: 63.28%
+[2021-03-29 16:52:22,185][trainer][INFO] - [30%] Train Loss: nan Accuracy: 63.76%
+[2021-03-29 16:52:27,472][trainer][INFO] - [40%] Train Loss: nan Accuracy: 63.53%
+[2021-03-29 16:52:32,781][trainer][INFO] - [50%] Train Loss: nan Accuracy: 63.53%
+[2021-03-29 16:52:38,104][trainer][INFO] - [60%] Train Loss: nan Accuracy: 63.74%
+[2021-03-29 16:52:43,420][trainer][INFO] - [70%] Train Loss: nan Accuracy: 63.61%
+[2021-03-29 16:52:48,737][trainer][INFO] - [80%] Train Loss: nan Accuracy: 63.48%
+[2021-03-29 16:52:54,090][trainer][INFO] - [90%] Train Loss: nan Accuracy: 63.57%
+[2021-03-29 16:52:59,410][trainer][INFO] - [100%] Train Loss: nan Accuracy: 63.54%
+[2021-03-29 16:53:01,936][trainer][INFO] - Valid Loss: nan Accuracy: 63.64%
+[2021-03-29 16:53:01,936][trainer][INFO] - ===== Epoch 0 - Fold 2 =====
+[2021-03-29 16:53:01,967][trainer][INFO] - [0%] Train Loss: nan Accuracy: 59.38%
+[2021-03-29 16:53:07,267][trainer][INFO] - [10%] Train Loss: nan Accuracy: 64.22%
+[2021-03-29 16:53:12,589][trainer][INFO] - [20%] Train Loss: nan Accuracy: 64.08%

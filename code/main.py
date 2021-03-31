@@ -23,7 +23,8 @@ def main(cfg):
     # Model dictionary
     __MODEL__ = {
         'transformer': models.Transformer,
-        'rnn': models.RNN
+        'rnn': models.RNN,
+        'cnn':models.CNN
     }
     
     # Device     

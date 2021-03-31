@@ -1,22 +1,37 @@
 model_name: "transformer"
 
 # Embedding cfg
-embedding_dim: 128
+embedding_dim: 512
+pos_enc_max_len: 500
+pos_enc_dropout: 0.1
 
 # Transformer cfg
-n_layers: 4
-model_in: 128    # Embedding.py will modify this cfg automatically
-attention_hid: 128
-n_heads: 4
-ff_hid: 512
+transformer_in: 512    # Embedding.py will modify this cfg automatically
+transformer_n_layers: 3
+transformer_n_heads: 4
+transformer_out: 512
+
+# RNN cfg
+rnn_in: 512
+rnn_hid: 256
+rnn_n_layers: 4
+rnn_dropout: 0.3
+rnn_bidirection: True
+rnn_out: 2048
+
+# Classifier
+classifier_in: 2048
+use_dist: True
+use_cos: True
+cls_hid: 64
 
 
 # train config
 use_GPU: True
 gpu_id: 1
 
-EPOCH: 10
-batch_size: 24
+EPOCH: 20
+batch_size: 32
 k_fold: 5
-lr: 5e-3
+lr: 8e-3
 weight_decay: 1e-3

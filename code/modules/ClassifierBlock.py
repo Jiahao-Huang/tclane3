@@ -8,18 +8,17 @@ class ClassifierBlock(nn.Module):
         super(ClassifierBlock, self).__init__()
         self.use_dist = cfg.use_dist
         self.use_cos = cfg.use_cos
-        self.cls_hid = cfg.cls_hid
 
-        self.fc_in = cfg.model_out
+        fc_in = cfg.classifier_in
         if self.use_dist:
-            self.fc_in += 1
+            fc_in += 1
         if self.use_cos:
-            self.fc_in += 1
+            fc_in += 1
 
         self.fc_classify = nn.Sequential(
-            nn.Linear(self.fc_in, self.cls_hid), 
+            nn.Linear(fc_in, cfg.cls_hid), 
             nn.ReLU(),
-            nn.Linear(self.cls_hid, 2)
+            nn.Linear(cfg.cls_hid, 2)
         )
     
     def inner_product(self, y1, y2):

@@ -1,0 +1,57 @@
+[2021-03-30 14:35:48,014][__main__][INFO] - ====================
+[2021-03-30 14:35:48,021][__main__][INFO] - Device: cuda:1
+[2021-03-30 14:35:48,021][__main__][INFO] - Preprocessing...
+[2021-03-30 14:35:48,878][__main__][INFO] - Making Dataset...
+[2021-03-30 14:35:49,154][__main__][INFO] - Model:transformer
+[2021-03-30 14:35:52,687][__main__][INFO] - ===== Start 5-fold training! =====
+[2021-03-30 14:35:52,768][trainer][INFO] - ===== Epoch 0 - Fold 0 =====
+[2021-03-30 14:35:52,809][trainer][INFO] - [0%] Train Loss: 0.046710 Accuracy: 40.62%
+[2021-03-30 14:35:58,992][trainer][INFO] - [10%] Train Loss: 0.028849 Accuracy: 60.30%
+[2021-03-30 14:36:05,147][trainer][INFO] - [20%] Train Loss: 0.024689 Accuracy: 62.43%
+[2021-03-30 14:36:11,371][trainer][INFO] - [30%] Train Loss: 0.023323 Accuracy: 62.72%
+[2021-03-30 14:36:17,583][trainer][INFO] - [40%] Train Loss: 0.022648 Accuracy: 62.78%
+[2021-03-30 14:36:23,781][trainer][INFO] - [50%] Train Loss: 0.022319 Accuracy: 62.78%
+[2021-03-30 14:36:29,963][trainer][INFO] - [60%] Train Loss: 0.022199 Accuracy: 62.84%
+[2021-03-30 14:36:36,168][trainer][INFO] - [70%] Train Loss: 0.021973 Accuracy: 62.84%
+[2021-03-30 14:36:42,357][trainer][INFO] - [80%] Train Loss: 0.021787 Accuracy: 62.95%
+[2021-03-30 14:36:48,551][trainer][INFO] - [90%] Train Loss: 0.021639 Accuracy: 63.05%
+[2021-03-30 14:36:54,774][trainer][INFO] - [100%] Train Loss: 0.021522 Accuracy: 63.13%
+[2021-03-30 14:36:59,787][trainer][INFO] - Valid Loss: 0.020533 Accuracy: 63.35%
+[2021-03-30 14:36:59,787][trainer][INFO] - ===== Epoch 0 - Fold 1 =====
+[2021-03-30 14:36:59,818][trainer][INFO] - [0%] Train Loss: 0.021764 Accuracy: 56.25%
+[2021-03-30 14:37:06,019][trainer][INFO] - [10%] Train Loss: 0.020328 Accuracy: 64.56%
+[2021-03-30 14:37:12,203][trainer][INFO] - [20%] Train Loss: 0.020482 Accuracy: 63.68%
+[2021-03-30 14:37:18,330][trainer][INFO] - [30%] Train Loss: 0.020524 Accuracy: 63.44%
+[2021-03-30 14:37:24,555][trainer][INFO] - [40%] Train Loss: 0.020496 Accuracy: 63.60%
+[2021-03-30 14:37:30,719][trainer][INFO] - [50%] Train Loss: 0.020484 Accuracy: 63.73%
+[2021-03-30 14:37:36,871][trainer][INFO] - [60%] Train Loss: 0.020493 Accuracy: 63.67%
+[2021-03-30 14:37:43,043][trainer][INFO] - [70%] Train Loss: 0.020489 Accuracy: 63.69%
+[2021-03-30 14:37:49,211][trainer][INFO] - [80%] Train Loss: 0.020488 Accuracy: 63.69%
+[2021-03-30 14:37:55,434][trainer][INFO] - [90%] Train Loss: 0.020498 Accuracy: 63.62%
+[2021-03-30 14:38:01,614][trainer][INFO] - [100%] Train Loss: 0.020499 Accuracy: 63.62%
+[2021-03-30 14:38:06,634][trainer][INFO] - Valid Loss: 0.020561 Accuracy: 63.22%
+[2021-03-30 14:38:06,635][trainer][INFO] - ===== Epoch 0 - Fold 2 =====
+[2021-03-30 14:38:06,666][trainer][INFO] - [0%] Train Loss: 0.020692 Accuracy: 62.50%
+[2021-03-30 14:38:12,834][trainer][INFO] - [10%] Train Loss: 0.020516 Accuracy: 63.52%
+[2021-03-30 14:38:18,988][trainer][INFO] - [20%] Train Loss: 0.020566 Accuracy: 63.22%
+[2021-03-30 14:38:25,183][trainer][INFO] - [30%] Train Loss: 0.020557 Accuracy: 63.26%
+[2021-03-30 14:38:31,360][trainer][INFO] - [40%] Train Loss: 0.020552 Accuracy: 63.29%
+[2021-03-30 14:38:37,573][trainer][INFO] - [50%] Train Loss: 0.020556 Accuracy: 63.28%
+[2021-03-30 14:38:43,759][trainer][INFO] - [60%] Train Loss: 0.020533 Accuracy: 63.41%
+[2021-03-30 14:38:49,936][trainer][INFO] - [70%] Train Loss: 0.020538 Accuracy: 63.40%
+[2021-03-30 14:38:56,106][trainer][INFO] - [80%] Train Loss: 0.020529 Accuracy: 63.45%
+[2021-03-30 14:39:02,234][trainer][INFO] - [90%] Train Loss: 0.020527 Accuracy: 63.46%
+[2021-03-30 14:39:08,291][trainer][INFO] - [100%] Train Loss: 0.020516 Accuracy: 63.53%
+[2021-03-30 14:39:13,264][trainer][INFO] - Valid Loss: 0.020531 Accuracy: 63.65%
+[2021-03-30 14:39:13,264][trainer][INFO] - ===== Epoch 0 - Fold 3 =====
+[2021-03-30 14:39:13,294][trainer][INFO] - [0%] Train Loss: 0.016662 Accuracy: 81.25%
+[2021-03-30 14:39:19,394][trainer][INFO] - [10%] Train Loss: 0.020655 Accuracy: 62.68%
+[2021-03-30 14:39:25,536][trainer][INFO] - [20%] Train Loss: 0.020652 Accuracy: 62.75%
+[2021-03-30 14:39:31,707][trainer][INFO] - [30%] Train Loss: 0.020565 Accuracy: 63.23%
+[2021-03-30 14:39:37,931][trainer][INFO] - [40%] Train Loss: 0.020534 Accuracy: 63.40%
+[2021-03-30 14:39:44,098][trainer][INFO] - [50%] Train Loss: 0.020527 Accuracy: 63.44%
+[2021-03-30 14:39:50,251][trainer][INFO] - [60%] Train Loss: 0.020519 Accuracy: 63.50%
+[2021-03-30 14:39:56,465][trainer][INFO] - [70%] Train Loss: 0.020517 Accuracy: 63.52%
+[2021-03-30 14:40:02,688][trainer][INFO] - [80%] Train Loss: 0.020552 Accuracy: 63.33%
+[2021-03-30 14:40:08,867][trainer][INFO] - [90%] Train Loss: 0.020553 Accuracy: 63.32%
+[2021-03-30 14:40:15,045][trainer][INFO] - [100%] Train Loss: 0.020538 Accuracy: 63.40%

@@ -6,23 +6,17 @@ from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 class RNNBlock(nn.Module):
     def __init__(self, cfg):
         super(RNNBlock, self).__init__()
-        self.batch_size = cfg.batch_size
-        self.model_in = cfg.model_in
-        self.rnn_hid = cfg.rnn_hid
-        self.n_layers = cfg.n_layers
-        self.dropout = cfg.dropout
-        self.bidirection = cfg.bidirection
-
-        cfg.model_out = self.rnn_hid * self.n_layers * (int(self.bidirection) + 1)
 
         self.rnn = nn.LSTM(
-            input_size=self.model_in,
-            hidden_size=self.rnn_hid,
-            num_layers=self.n_layers,
-            dropout=self.dropout,
+            input_size=cfg.rnn_in,
+            hidden_size=cfg.rnn_hid,
+            num_layers=cfg.rnn_n_layers,
+            dropout=cfg.rnn_dropout,
             batch_first=True,
-            bidirectional=self.bidirection
+            bidirectional=cfg.rnn_bidirection
         )
+        
+        cfg.rnn_out = cfg.rnn_hid * cfg.rnn_n_layers * (int(cfg.rnn_bidirection) + 1)
     
     def forward(self, x, x_len):
         b, seq_len, _ = x.size()

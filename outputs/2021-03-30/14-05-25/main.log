@@ -1,0 +1,7 @@
+[2021-03-30 14:05:25,660][__main__][INFO] - ====================
+[2021-03-30 14:05:25,668][__main__][INFO] - Device: cuda:1
+[2021-03-30 14:05:25,669][__main__][INFO] - Preprocessing...
+[2021-03-30 14:05:26,557][__main__][INFO] - Making Dataset...
+[2021-03-30 14:05:26,824][__main__][INFO] - Model:transformer
+[2021-03-30 14:05:30,222][__main__][INFO] - ===== Start 5-fold training! =====
+[2021-03-30 14:05:30,304][trainer][INFO] - ===== Epoch 0 - Fold 0 =====

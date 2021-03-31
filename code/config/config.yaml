@@ -3,7 +3,7 @@ cwd: "."
 
 defaults:
   - preprocess
-  - model: rnn
+  - model: transformer
 
 use_GPU: True
 gpu_id: 1

@@ -19,11 +19,14 @@ class Transformer(nn.Module):
     
     def forward(self, X):
         X1, X2, len1, len2 = X['X1'], X['X2'], X['len1'], X['len2']
+        mask1 = X1.data.eq(0)
+        mask2 = X2.data.eq(0)
+
         embedding_output1 = self.embedding(X1)
         embedding_output2 = self.embedding(X2)
 
-        transformer_output1 = self.transformer(embedding_output1)
-        transformer_output2 = self.transformer(embedding_output2)
+        transformer_output1 = self.transformer(embedding_output1.transpose(0, 1), mask1).transpose(0, 1)
+        transformer_output2 = self.transformer(embedding_output2.transpose(0, 1), mask2).transpose(0, 1)
 
         _, rnn_output1, _ = self.rnn(transformer_output1, len1)
         _, rnn_output2, _ = self.rnn(transformer_output2, len2)

@@ -9,8 +9,8 @@ class TransformerBlock(nn.Module):
         self.encoder = nn.TransformerEncoder(encoder_layer, cfg.transformer_n_layers)
         cfg.transformer_out = cfg.transformer_in
     
-    def forward(self, x):
-        return self.encoder(x)
+    def forward(self, x, mask):
+        return self.encoder(x, src_key_padding_mask = mask)
 
 
 '''

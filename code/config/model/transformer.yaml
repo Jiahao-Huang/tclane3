@@ -19,9 +19,9 @@ rnn_out: 2048
 
 # Classifier
 classifier_in: 2048
+use_sum: False
 use_dist: True
 use_cos: True
-cls_hid: 256
 
 
 # train config

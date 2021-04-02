@@ -1,0 +1,6 @@
+Parameter_json : './Model_zoo/Bert_NER/config.json'
+Parameter_index : './Model_zoo/Bert_NER/pytorch_model.bin'
+vocab : './Model_zoo/Bert_NER/vocab.txt'
+Model_Config_file: './checkpoint/Bert_NER/config.pkl'
+special_tokens_dict: {'cls_token': '<CLS>', 'bos_token': '<s>', 'unk_token': '<UNK>'}
+Save_Model_Config_file: './Model_zoo/Bert_NER/Bert_model.pt'

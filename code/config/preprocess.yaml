@@ -3,6 +3,9 @@
 train_tsv: "./tcdata/oppo_breeno_round1_data/train.tsv"
 test_tsv: "./tcdata/oppo_breeno_round1_data/testB.tsv"
 
+bert_freq: "./code/model_files/bert/counts.json"
+bert_vocab: "./code/model_files/bert/vocab.txt"
+
 # preprocess config
 preprocess: True
 train_tmp: "./user_data/tmp_data/train.pkl"
@@ -12,4 +15,6 @@ swap: True    # swap two sentences
 data_size_train: 100000
 data_size_test: 25000
 
-vocab_size: 21962
+min_freq: 5
+
+vocab_size: 25000    #21962

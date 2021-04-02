@@ -24,7 +24,8 @@ def main(cfg):
     __MODEL__ = {
         'transformer': models.Transformer,
         'rnn': models.RNN,
-        'cnn':models.CNN
+        'cnn':models.CNN,
+        'bert':models.Bert
     }
     
     # Device     

@@ -3,7 +3,7 @@ cwd: "."
 
 defaults:
   - preprocess
-  - model: transformer
+  - model: bert
 
 use_GPU: True
 gpu_id: 1

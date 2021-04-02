@@ -1,0 +1,31 @@
+
+model_name: 'bert'
+
+# Bert cfg
+pretrained_model: './code/model_files/bert/pytorch_model.bin'
+model_config: './code/model_files/bert/config.json'
+
+# RNN cfg
+rnn_in: 768
+rnn_hid: 256
+rnn_n_layers: 4
+rnn_dropout: 0.2
+rnn_bidirection: True
+rnn_out: 2048
+
+# Classifier
+classifier_in: 2048
+use_sum: False
+use_dist: True
+use_cos: True
+
+
+# train config
+use_GPU: True
+gpu_id: 1
+
+EPOCH: 20
+batch_size: 32
+k_fold: 5
+lr: 4e-5
+weight_decay: 1e-3
